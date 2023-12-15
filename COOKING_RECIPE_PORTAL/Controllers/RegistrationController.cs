@@ -14,7 +14,7 @@ namespace COOKING_RECIPE_PORTAL.Controllers
         {
             _dbContext = dbContext;
         }
-
+                    
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Login>>> GetRegisterUser()
         {
@@ -25,7 +25,7 @@ namespace COOKING_RECIPE_PORTAL.Controllers
 
             return await _dbContext.Login.ToListAsync();
         }
-
+  
         [HttpGet("{id}")]
         public async Task<ActionResult<Login>> GetUserById(int id)
         {
@@ -45,6 +45,28 @@ namespace COOKING_RECIPE_PORTAL.Controllers
             await _dbContext.SaveChangesAsync();
 
             return CreatedAtAction(nameof(GetUserById), new { id = login.Id }, login);
+        }
+
+         [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteUser(int id)
+        {
+            if (_dbContext.Login == null)
+            {
+                return NotFound();
+            }
+
+            var login = await _dbContext.Login.FindAsync(id);
+
+            if (login == null)
+            {
+                return NotFound();
+            }
+
+            _dbContext.Remove(login);
+
+            await _dbContext.SaveChangesAsync();
+
+            return Ok();
         }
     }
 }

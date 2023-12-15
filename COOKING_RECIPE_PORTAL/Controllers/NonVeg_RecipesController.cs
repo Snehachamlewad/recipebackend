@@ -1,4 +1,4 @@
-﻿using COOKING_RECIPE_PORTAL.Model;
+using COOKING_RECIPE_PORTAL.Model;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 

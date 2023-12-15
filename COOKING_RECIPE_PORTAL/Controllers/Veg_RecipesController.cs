@@ -1,4 +1,4 @@
-﻿using COOKING_RECIPE_PORTAL.Model;
+using COOKING_RECIPE_PORTAL.Model;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -22,7 +22,7 @@ namespace COOKING_RECIPE_PORTAL.Controllers
                 return NotFound();
             }
 
-            return await _dbContext.Veg_Recipe.ToListAsync();
+            return await _dbContext.Veg_Recipe.ToListAsync(); 
         }
 
         [HttpGet("{id}")]
@@ -39,14 +39,36 @@ namespace COOKING_RECIPE_PORTAL.Controllers
 
         [HttpPost]
         public async Task<ActionResult<Veg_Recipe>> GetVegRecipeById(Veg_Recipe veg_recipe)
-        {
+        {          
+            //Console.WriteLine(veg_recipe);
+
+            // if (veg_recipe != null)
+            // {
+            //     _dbContext.Veg_Recipe.Add(veg_recipe);
+
+            //     try
+            //     {
+            //         await _dbContext.SaveChangesAsync();
+            //     }
+            //     catch (Exception e)
+            //     {
+            //         Console.WriteLine(e.Message);
+
+            //         return Ok(false);
+            //     }
+            // }
+            // else
+            // {
+            //     return Ok("not");
+            // }
+
             _dbContext.Veg_Recipe.Add(veg_recipe);
             await _dbContext.SaveChangesAsync();
 
             return CreatedAtAction(nameof(GetVegRecipeById), new { id = veg_recipe.Recipe_Id }, veg_recipe);
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("{id}")]              
         public async Task<IActionResult> DeleteVegRecipe(int id)
         {
             if (_dbContext.Veg_Recipe == null)

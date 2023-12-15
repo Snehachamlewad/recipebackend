@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddDbContext<LoginContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("OnlineCookingPortal")));
+    options.UseNpgsql(builder.Configuration.GetConnectionString("WebApiDatabase")));
 
 
 builder.Services.AddControllers();
@@ -21,14 +21,14 @@ builder.Services.AddScoped<IJWTManagerRepository, JWTManagerRepository>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddCors();
-
+            
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAngularOrigins",
     builder =>
-    {
+    {  
         builder.WithOrigins(
-                            "http://localhost:4200", "http://localhost:52402"
+                            "http://localhost:7137","http://localhost:4200", "http://localhost:52402"
                             )
                             .AllowAnyHeader()
                             .AllowAnyMethod();

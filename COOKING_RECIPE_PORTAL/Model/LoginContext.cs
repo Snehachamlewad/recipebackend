@@ -1,4 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 
 namespace COOKING_RECIPE_PORTAL.Model
 {
@@ -9,9 +9,10 @@ namespace COOKING_RECIPE_PORTAL.Model
             
         }
 
-        public DbSet<Login> Login { get; set; }
+        public DbSet<Login> Login { get; set; }         // The DbSet enables the user to perform various operations like add, remove, update, etc. on the entity set.
         public DbSet<Veg_Recipe> Veg_Recipe { get; set; }
         public DbSet<NonVeg_Recipe> NonVeg_Recipe { get; set; }
     }
 
 }
+

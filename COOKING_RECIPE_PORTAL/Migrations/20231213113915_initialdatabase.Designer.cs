@@ -2,61 +2,61 @@
 using COOKING_RECIPE_PORTAL.Model;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
 
 namespace COOKING_RECIPE_PORTAL.Migrations
 {
     [DbContext(typeof(LoginContext))]
-    [Migration("20230801114456_CookingPortal")]
-    partial class CookingPortal
+    [Migration("20231213113915_initialdatabase")]
+    partial class initialdatabase
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.9")
-                .HasAnnotation("Relational:MaxIdentifierLength", 128);
+                .HasAnnotation("ProductVersion", "7.0.11")
+                .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
-            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+            NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
             modelBuilder.Entity("COOKING_RECIPE_PORTAL.Model.Login", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("integer");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<int>("Age")
-                        .HasColumnType("int");
+                        .HasColumnType("integer");
 
                     b.Property<string>("City")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("text");
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("text");
 
                     b.Property<string>("FirstName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("text");
 
                     b.Property<string>("LastName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("text");
 
                     b.Property<long>("Mobile_No")
                         .HasColumnType("bigint");
 
                     b.Property<string>("Password")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("text");
 
                     b.HasKey("Id");
 
@@ -67,16 +67,25 @@ namespace COOKING_RECIPE_PORTAL.Migrations
                 {
                     b.Property<int>("Recipe_Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("integer");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Recipe_Id"));
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Recipe_Id"));
 
                     b.Property<string>("Recipe_Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("text");
 
-                    b.Property<int>("Recipe_Price")
-                        .HasColumnType("int");
+                    b.Property<string>("ingredient")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("procedure")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("recipeimages")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.HasKey("Recipe_Id");
 
@@ -87,16 +96,25 @@ namespace COOKING_RECIPE_PORTAL.Migrations
                 {
                     b.Property<int>("Recipe_Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("integer");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Recipe_Id"));
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Recipe_Id"));
 
                     b.Property<string>("Recipe_Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("text");
 
-                    b.Property<int>("Recipe_Price")
-                        .HasColumnType("int");
+                    b.Property<string>("ingredient")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("procedure")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("recipeimages")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.HasKey("Recipe_Id");
 

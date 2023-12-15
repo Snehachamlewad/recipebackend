@@ -7,6 +7,8 @@ namespace COOKING_RECIPE_PORTAL.Model
         [Key]
         public int Recipe_Id { get; set; }
         public string Recipe_Name { get; set; }
-        public int Recipe_Price { get; set; }
+        public string ingredient { get; set; }
+          public string procedure { get; set; }
+           public string recipeimages{get;set;}
     }
 }

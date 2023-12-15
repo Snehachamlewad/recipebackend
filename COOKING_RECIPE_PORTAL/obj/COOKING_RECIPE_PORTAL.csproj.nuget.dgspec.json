@@ -1,33 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\PBHANUDA\\source\\repos\\COOKING_RECIPE_PORTAL\\COOKING_RECIPE_PORTAL\\COOKING_RECIPE_PORTAL.csproj": {}
+    "C:\\Users\\SCHAMLEW\\OneDrive - Capgemini\\Desktop\\Newone cooking case study\\COOKING_RECIPE_PORTAL\\COOKING_RECIPE_PORTAL\\COOKING_RECIPE_PORTAL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\PBHANUDA\\source\\repos\\COOKING_RECIPE_PORTAL\\COOKING_RECIPE_PORTAL\\COOKING_RECIPE_PORTAL.csproj": {
+    "C:\\Users\\SCHAMLEW\\OneDrive - Capgemini\\Desktop\\Newone cooking case study\\COOKING_RECIPE_PORTAL\\COOKING_RECIPE_PORTAL\\COOKING_RECIPE_PORTAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PBHANUDA\\source\\repos\\COOKING_RECIPE_PORTAL\\COOKING_RECIPE_PORTAL\\COOKING_RECIPE_PORTAL.csproj",
+        "projectUniqueName": "C:\\Users\\SCHAMLEW\\OneDrive - Capgemini\\Desktop\\Newone cooking case study\\COOKING_RECIPE_PORTAL\\COOKING_RECIPE_PORTAL\\COOKING_RECIPE_PORTAL.csproj",
         "projectName": "COOKING_RECIPE_PORTAL",
-        "projectPath": "C:\\Users\\PBHANUDA\\source\\repos\\COOKING_RECIPE_PORTAL\\COOKING_RECIPE_PORTAL\\COOKING_RECIPE_PORTAL.csproj",
-        "packagesPath": "C:\\Users\\PBHANUDA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PBHANUDA\\source\\repos\\COOKING_RECIPE_PORTAL\\COOKING_RECIPE_PORTAL\\obj\\",
+        "projectPath": "C:\\Users\\SCHAMLEW\\OneDrive - Capgemini\\Desktop\\Newone cooking case study\\COOKING_RECIPE_PORTAL\\COOKING_RECIPE_PORTAL\\COOKING_RECIPE_PORTAL.csproj",
+        "packagesPath": "C:\\Users\\SCHAMLEW\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\SCHAMLEW\\OneDrive - Capgemini\\Desktop\\Newone cooking case study\\COOKING_RECIPE_PORTAL\\COOKING_RECIPE_PORTAL\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\PBHANUDA\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\SCHAMLEW\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "C:\\Program Files\\dotnet\\sdk\\7.0.307\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -56,21 +48,25 @@
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[7.0.9, )"
+              "version": "[7.0.11, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[7.0.9, )"
+              "version": "[7.0.11, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.9, )"
+              "version": "[7.0.11, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[7.0.11, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -100,7 +96,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.307\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
